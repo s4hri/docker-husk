@@ -11,7 +11,7 @@ ARG NVIDIA_ENV=0
 USER root
 
 ENV LOCAL_USER_ID=${LOCAL_USER_ID}
-ENV NVIDIA_ENV=1
+ENV NVIDIA_ENV=${NVIDIA_ENV}
 
 RUN if [ "$NVIDIA_ENV" = 1 ] ; then apt-get update && apt-get install -y --no-install-recommends \
       libxau6 libxdmcp6 libxcb1 libxext6 libx11-6 && \
